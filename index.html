@@ -234,7 +234,7 @@
 </div>
 
 <script>
-document.getElementById('surveyForm').addEventListener('submit', async function(event) {
+document.getElementById('surveyForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
   // Formulardaten sammeln
@@ -252,19 +252,31 @@ document.getElementById('surveyForm').addEventListener('submit', async function(
   };
 
   // Daten an Google Sheets senden
-  await fetch('https://script.google.com/macros/s/AKfycbyodzfcdD634EqTwrtw1kqovYA3DdhoNrruRTRhGW4jQ4VNGLmg_5E1Am8ynalzdXta/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbyodzfcdD634EqTwrtw1kqovYA3DdhoNrruRTRhGW4jQ4VNGLmg_5E1Am8ynalzdXta/exec', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    mode: 'no-cors',
     body: JSON.stringify(formData)
+  })
+  .then(() => {
+
+    // Formular ausblenden
+    document.getElementById('surveyForm').style.display = 'none';
+
+    // Danke-Nachricht anzeigen
+    document.getElementById('thankYouMessage').style.display = 'block';
+
+    // Nach oben scrollen
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  })
+  .catch(error => {
+    console.error('Fehler beim Senden:', error);
+    alert('Es gab ein Problem beim Übermitteln deiner Antwort. Bitte versuche es erneut.');
   });
 
-  // Danke-Nachricht anzeigen
-  document.getElementById('surveyForm').style.display = 'none';
-  document.getElementById('thankYouMessage').style.display = 'block';
-
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
 
