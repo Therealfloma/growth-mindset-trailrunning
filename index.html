@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth Mindset im Trailrunning – Umfrage</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #222;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h1, h2 {
+      color: #1f4d3a;
+    }
+
+    .question {
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .scale {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #bbb;
+      font-size: 14px;
+    }
+
+    select {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #bbb;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    button {
+      background: #1f7a5a;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #166347;
+    }
+
+    .note {
+      background: #eef7f2;
+      border-left: 5px solid #1f7a5a;
+      padding: 12px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .thank-you h2 {
+      color: #1f7a5a;
+      font-size: 30px;
+    }
+
+    .thank-you p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Formular -->
+  <form id="surveyForm">
+
+    <h1>🏔️ Growth Mindset im Trailrunning</h1>
+
+    <div class="note">
+      <strong>Dauer:</strong> ca. 3–5 Minuten<br>
+      Bitte beantworte die Fragen ehrlich. Es gibt keine richtigen oder falschen Antworten.
+    </div>
+
+    <h2>Teil A – Allgemeine Angaben</h2>
+
+    <div class="question">
+      <label for="experience">1. Wie lange läufst du bereits Trailrunning?</label>
+      <select id="experience" name="experience">
+        <option>Weniger als 1 Jahr</option>
+        <option>1–3 Jahre</option>
+        <option>4–7 Jahre</option>
+        <option>8–10 Jahre</option>
+        <option>Mehr als 10 Jahre</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label for="frequency">2. Wie häufig trainierst du pro Woche?</label>
+      <select id="frequency" name="frequency">
+        <option>1–2 Mal</option>
+        <option>3–4 Mal</option>
+        <option>5–6 Mal</option>
+        <option>Täglich</option>
+      </select>
+    </div>
+
+    <h2>Teil B – Aussagen zum Growth Mindset</h2>
+    <p><strong>Skala:</strong> 1 = stimme gar nicht zu | 5 = stimme voll zu</p>
+
+    <div class="question">
+      <label>1. Ich glaube, dass ich meine Trailrunning-Fähigkeiten durch gezieltes Training deutlich verbessern kann.</label>
+      <div class="scale">
+        <label><input type="radio" name="q1" value="1"> 1</label>
+        <label><input type="radio" name="q1" value="2"> 2</label>
+        <label><input type="radio" name="q1" value="3"> 3</label>
+        <label><input type="radio" name="q1" value="4"> 4</label>
+        <label><input type="radio" name="q1" value="5"> 5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>2. Technisch schwierige Trails sehe ich als Chance, neue Fähigkeiten zu lernen.</label>
+      <div class="scale">
+        <label><input type="radio" name="q2" value="1"> 1</label>
+        <label><input type="radio" name="q2" value="2"> 2</label>
+        <label><input type="radio" name="q2" value="3"> 3</label>
+        <label><input type="radio" name="q2" value="4"> 4</label>
+        <label><input type="radio" name="q2" value="5"> 5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>3. Nach einem schlechten Wettkampf analysiere ich, was ich verbessern kann.</label>
+      <div class="scale">
+        <label><input type="radio" name="q3" value="1"> 1</label>
+        <label><input type="radio" name="q3" value="2"> 2</label>
+        <label><input type="radio" name="q3" value="3"> 3</label>
+        <label><input type="radio" name="q3" value="4"> 4</label>
+        <label><input type="radio" name="q3" value="5"> 5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>4. Rückschläge gehören für mich zum Lernprozess.</label>
+      <div class="scale">
+        <label><input type="radio" name="q4" value="1"> 1</label>
+        <label><input type="radio" name="q4" value="2"> 2</label>
+        <label><input type="radio" name="q4" value="3"> 3</label>
+        <label><input type="radio" name="q4" value="4"> 4</label>
+        <label><input type="radio" name="q4" value="5"> 5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>5. Ich glaube, dass mentale Stärke trainierbar ist.</label>
+      <div class="scale">
+        <label><input type="radio" name="q5" value="1"> 1</label>
+        <label><input type="radio" name="q5" value="2"> 2</label>
+        <label><input type="radio" name="q5" value="3"> 3</label>
+        <label><input type="radio" name="q5" value="4"> 4</label>
+        <label><input type="radio" name="q5" value="5"> 5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <label>6. Feedback von anderen Läufer:innen hilft mir, besser zu werden.</label>
+      <div class="scale">
+        <label><input type="radio" name="q6" value="1"> 1</label>
+        <label><input type="radio" name="q6" value="2"> 2</label>
+        <label><input type="radio" name="q6" value="3"> 3</label>
+        <label><input type="radio" name="q6" value="4"> 4</label>
+        <label><input type="radio" name="q6" value="5"> 5</label>
+      </div>
+    </div>
+
+    <h2>Teil C – Offene Fragen</h2>
+
+    <div class="question">
+      <label for="challenge">Was war deine größte Herausforderung im Trailrunning – und was hast du daraus gelernt?</label>
+      <textarea id="challenge" name="challenge"></textarea>
+    </div>
+
+    <div class="question">
+      <label for="growth">Was bedeutet persönliche Weiterentwicklung im Trailrunning für dich?</label>
+      <textarea id="growth" name="growth"></textarea>
+    </div>
+
+    <button type="submit">Umfrage absenden</button>
+
+  </form>
+
+  <!-- Danke-Nachricht -->
+  <div id="thankYouMessage" class="thank-you">
+    <h2>✅ Vielen Dank für deine Antwort!</h2>
+    <p>Du kannst diese Seite jetzt schließen.</p>
+  </div>
+
+</div>
+
+<script>
+document.getElementById('surveyForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+
+  // Formulardaten sammeln
+  const formData = {
+    experience: document.getElementById('experience').value,
+    frequency: document.getElementById('frequency').value,
+    q1: document.querySelector('input[name="q1"]:checked')?.value || '',
+    q2: document.querySelector('input[name="q2"]:checked')?.value || '',
+    q3: document.querySelector('input[name="q3"]:checked')?.value || '',
+    q4: document.querySelector('input[name="q4"]:checked')?.value || '',
+    q5: document.querySelector('input[name="q5"]:checked')?.value || '',
+    q6: document.querySelector('input[name="q6"]:checked')?.value || '',
+    challenge: document.getElementById('challenge').value,
+    growth: document.getElementById('growth').value
+  };
+
+  // Daten an Google Sheets senden
+  await fetch('https://script.google.com/macros/s/AKfycbyodzfcdD634EqTwrtw1kqovYA3DdhoNrruRTRhGW4jQ4VNGLmg_5E1Am8ynalzdXta/exec', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  });
+
+  // Danke-Nachricht anzeigen
+  document.getElementById('surveyForm').style.display = 'none';
+  document.getElementById('thankYouMessage').style.display = 'block';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
