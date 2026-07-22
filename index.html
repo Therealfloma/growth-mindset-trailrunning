@@ -154,27 +154,65 @@
     </div>
 
     <div class="question">
-      <label for="ziele">4. Welche sportlichen Ziele verfolgst du?</label>
-      <select id="ziele" name="ziele">
-        <option>bitte wähle eine Antwort</option>
-        <option>Ich möchte schneller werden</option>
-        <option>Ich möchte längere Distanzen laufen</option>
-        <option>Ich möchte an Wettkämpfen teilnehmen</option>
-        <option>Ich möchte verletzungsfrei bleiben</option>
-        <option>Ich möchte Natur und Bewegung genießen</option>
-      </select>
-    </div>
+      	<label>4. Welche sportlichen Ziele verfolgst du?</label>
+ 	<small>Wähle deine 2 größten Ziele aus.</small>
+
+  	<div>
+    		<label>
+     		 <input type="checkbox" name="ziele" value="Ich möchte schneller werden">
+      Ich möchte schneller werden
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele" value="Ich möchte längere Distanzen laufen">
+      Ich möchte längere Distanzen laufen
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele" value="Ich möchte an Wettkämpfen teilnehmen">
+      Ich möchte an Wettkämpfen teilnehmen
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele" value="Ich möchte verletzungsfrei bleiben">
+      Ich möchte verletzungsfrei bleiben
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele" value="Ich möchte Natur und Bewegung genießen">
+      Ich möchte Natur und Bewegung genießen
+    </label>
+
+  </div>
+</div>
+
 
     <div class="question">
-      <label for="ziele1">5. Welche mentalen Ziele verfolgst du?</label>
-      <select id="ziele1" name="ziele1">
-        <option>bitte wähle eine Antwort</option>
-        <option>Ich möchte mental stärker werden</option>
-        <option>Ich möchte besser mit Rückschlägen umgehen</option>
-        <option>Ich möchte meine Selbstmotivation verbessern</option>
-        <option>Ich möchte meine mentale Belastbarkeit steigern</option>
-      </select>
-    </div>
+       	<label>5. Welche mentalen Ziele verfolgst du?</label>
+ 	<small>Wähle deine 2 größten Ziele aus.</small>
+
+  	<div>
+    		<label>
+     		 <input type="checkbox" name="ziele1" value="Ich möchte mental stärker werden">
+      Ich möchte mental stärker werden
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele1" value="Ich möchte besser mit Rückschlägen umgehen">
+      Ich möchte besser mit Rückschlägen umgehen
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele1" value="Ich möchte meine Selbstmotivation verbessern">
+      Ich möchte meine Selbstmotivation verbessern
+    </label>
+
+    <label>
+      <input type="checkbox" name="ziele1" value="Ich möchte meine mentale Belastbarkeit steigern">
+      Ich möchte meine mentale Belastbarkeit steigern
+    </label>
+  </div>
+</div>
 
     <h2>Teil B – Aussagen zum Growth Mindset</h2>
     
@@ -322,6 +360,30 @@
 </div>
 
 <script>
+
+ function begrenzeCheckboxen(name) {
+  const checkboxes = document.querySelectorAll(`input[name="${name}"]`);
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      const checked = document.querySelectorAll(`input[name="${name}"]:checked`);
+
+      if (checked.length >= 2) {
+        checkboxes.forEach(cb => {
+          if (!cb.checked) cb.disabled = true;
+        });
+      } else {
+        checkboxes.forEach(cb => cb.disabled = false);
+      }
+    });
+  });
+}
+
+// Für beide Fragen aktivieren
+begrenzeCheckboxen('ziele1');
+begrenzeCheckboxen('ziele');
+
+
 document.getElementById('surveyForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -331,7 +393,9 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     frequency: document.getElementById('frequency').value,
     motivation: document.getElementById('motivation').value,
     ziele: document.getElementById('ziele').value,
-    ziele1: document.getElementById('ziele1').value,
+    ziele1: Array.from(document.querySelectorAll('input[name="ziele1"]:checked'))
+	.map(cb => cb.value)
+	.join(", "),
     mindset: document.getElementById('mindset').value,
     kopfentscheidung: document.getElementById('kopfentscheidung').value,
     mentality: document.getElementById('mentality').value,
