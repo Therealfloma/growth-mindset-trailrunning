@@ -237,49 +237,50 @@
 document.getElementById('surveyForm').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Formulardaten sammeln
+  // Daten sammeln
   const formData = {
     experience: document.getElementById('experience').value,
     frequency: document.getElementById('frequency').value,
+
     q1: document.querySelector('input[name="q1"]:checked')?.value || '',
     q2: document.querySelector('input[name="q2"]:checked')?.value || '',
     q3: document.querySelector('input[name="q3"]:checked')?.value || '',
     q4: document.querySelector('input[name="q4"]:checked')?.value || '',
     q5: document.querySelector('input[name="q5"]:checked')?.value || '',
     q6: document.querySelector('input[name="q6"]:checked')?.value || '',
+
     challenge: document.getElementById('challenge').value,
     growth: document.getElementById('growth').value
   };
 
-  // Daten an Google Sheets senden
+
+  // Daten für Google Apps Script vorbereiten
   const sendData = new FormData();
 
-Object.keys(formData).forEach(key => {
-  sendData.append(key, formData[key]);
-});
+  Object.keys(formData).forEach(function(key) {
+    sendData.append(key, formData[key]);
+  });
 
-fetch('https://script.google.com/macros/s/AKfycbyodzfcdD634EqTwrtw1kqovYA3DdhoNrruRTRhGW4jQ4VNGLmg_5E1Am8ynalzdXta/exec', {
-  method: 'POST',
-  body: sendData
-})
-  .then(() => {
 
-    // Formular ausblenden
-    document.getElementById('surveyForm').style.display = 'none';
+  // An Google Sheets senden
+  fetch('https://script.google.com/macros/s/AKfycbyodzfcdD634EqTwrtw1kqovYA3DdhoNrruRTRhGW4jQ4VNGLmg_5E1Am8ynalzdXta/exec', {
+    method: 'POST',
+    body: sendData
+  });
 
-    // Danke-Nachricht anzeigen
-    document.getElementById('thankYouMessage').style.display = 'block';
 
-    // Nach oben scrollen
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  // Formular ausblenden
+  document.getElementById('surveyForm').style.display = 'none';
 
-  })
-  .catch(error => {
-    console.error('Fehler beim Senden:', error);
-    alert('Es gab ein Problem beim Übermitteln deiner Antwort. Bitte versuche es erneut.');
+
+  // Danke-Nachricht anzeigen
+  document.getElementById('thankYouMessage').style.display = 'block';
+
+
+  // Nach oben scrollen
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
   });
 
 });
