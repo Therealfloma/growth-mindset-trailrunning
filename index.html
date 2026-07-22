@@ -392,7 +392,9 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     experience: document.getElementById('experience').value,
     frequency: document.getElementById('frequency').value,
     motivation: document.getElementById('motivation').value,
-    ziele: document.getElementById('ziele').value,
+	ziele1: Array.from(document.querySelectorAll('input[name="ziele"]:checked'))
+	.map(cb => cb.value)
+	.join(", "),
     ziele1: Array.from(document.querySelectorAll('input[name="ziele1"]:checked'))
 	.map(cb => cb.value)
 	.join(", "),
