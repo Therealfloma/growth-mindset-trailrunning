@@ -119,8 +119,32 @@
 
     <h2>A – Allgemeine Angaben</h2>
 
+	<div class="question">
+      <label for="alter">1. Wie alt bist du?</label>
+      <select id="alter" name="alter">
+        <option>bitte wähle eine Antwort</option>
+        <option>unter 20</option>
+        <option>20-29</option>
+        <option>30-39</option>
+        <option>40-49</option>
+	<option>50-59</option>
+	<option>60+</option>
+      </select>
+    </div>
+
+	<div class="question">
+      <label for="geschlecht">2. Geschlecht?</label>
+      <select id="geschlecht" name="geschlecht">
+        <option>bitte wähle eine Antwort</option>
+        <option>weiblich</option>
+        <option>männlich</option>
+        <option>divers</option>
+        <option>keine Angabe</option>
+      </select>
+    </div>
+
     <div class="question">
-      <label for="experience">1. Wie lange betreibst du bereits Trailrunning?</label>
+      <label for="experience">3. Wie lange betreibst du bereits Trailrunning?</label>
       <select id="experience" name="experience">
         <option>bitte wähle eine Antwort</option>
         <option>Weniger als 1 Jahr</option>
@@ -132,7 +156,7 @@
     </div>
 
     <div class="question">
-      <label for="frequency">2. Wie häufig trainierst du pro Woche?</label>
+      <label for="frequency">4. Wie häufig trainierst du pro Woche?</label>
       <select id="frequency" name="frequency">
         <option>bitte wähle eine Antwort</option>
         <option>1–2 Mal</option>
@@ -143,18 +167,18 @@
     </div>
 
     <div class="question">
-      <label for="motivation">3. Was motiviert dich am meisten beim Trailrunning?</label>
-      <select id="motivation" name="motivation">
+      <label for="wettkampf">5. Nimmst du an Trailrunning-Wettkämpfen teil?</label>
+      <select id="wettkampf" name="wettkampf">
         <option>bitte wähle eine Antwort</option>
-        <option>Natur</option>
-        <option>Leistung</option>
-        <option>Herausforderungen</option>
-        <option>Gemeinschaft</option>
+        <option>nein</option>
+        <option>gelegentlich (1-2 pro Jahr)</option>
+        <option>regelmäßig (3-6 pro Jahr)</option>
+        <option>leistungsorientiert (mehr als 6 pro Jahr)</option>
       </select>
     </div>
 
     <div class="question">
-      	<label>4. Welche sportlichen Ziele verfolgst du?</label>
+      	<label>6. Welche sportlichen Ziele verfolgst du?</label>
  	<small>Wähle deine 2 größten Ziele aus.</small>
 
   	<div>
@@ -188,7 +212,7 @@
 
 
     <div class="question">
-       	<label>5. Welche mentalen Ziele verfolgst du?</label>
+       	<label>7. Welche mentalen Ziele verfolgst du?</label>
  	<small>Wähle deine 2 größten Ziele aus.</small>
 
   	<div>
@@ -258,21 +282,45 @@
       </select>
     </div>
 
+    
+    <p><strong>Skala:</strong> 1 = stimme gar nicht zu | 2 = Stimme eher nicht zu | 3 = Teils/teils | 4 = Stimme eher zu | 5 = stimme voll zu</p>
+    
     <div class="question">
-      <label for="dnf">4. Was denkst du bei einem DNF?</label>
-      <select id="dnf" name="dnf">
-        <option>bitte wähle eine Antwort</option>
-        <option>Ich bin nicht gut genug</option>
-        <option>DNFs gehören dazu</option>
-        <option>Ich kann daraus lernen</option>
-        <option>Ich muss meine Vorbereitung verbessern</option>
-      </select>
+      <label>4. Ich kann meine Trailrunning-Fähigkeiten durch gezieltes Training deutlich verbessern.</label>
+      <div class="scale">
+        <label><input type="radio" name="q1" value="1"> 1</label>
+        <label><input type="radio" name="q1" value="2"> 2</label>
+        <label><input type="radio" name="q1" value="3"> 3</label>
+        <label><input type="radio" name="q1" value="4"> 4</label>
+        <label><input type="radio" name="q1" value="5"> 5</label>
+      </div>
     </div>
-    
-    <p><strong>Skala:</strong> 1 = stimme gar nicht zu | 5 = stimme voll zu</p>
-    
+
     <div class="question">
-      <label>5. Ich glaube, dass ich meine Trailrunning-Fähigkeiten durch gezieltes Training deutlich verbessern kann.</label>
+      <label>5. Technisch schwierige Trails motivieren mich eher, als dass sie mich abschrecken.</label>
+      <div class="scale">
+        <label><input type="radio" name="q2" value="1"> 1</label>
+        <label><input type="radio" name="q2" value="2"> 2</label>
+        <label><input type="radio" name="q2" value="3"> 3</label>
+        <label><input type="radio" name="q2" value="4"> 4</label>
+        <label><input type="radio" name="q2" value="5"> 5</label>
+      </div>
+    </div>
+
+<div class="question">
+      <label>6. Wenn ich ein Trainingsziel verfehle, verliere ich schnell die Motivation.</label>
+      <div class="scale">
+        <label><input type="radio" name="q3" value="1"> 1</label>
+        <label><input type="radio" name="q3" value="2"> 2</label>
+        <label><input type="radio" name="q3" value="3"> 3</label>
+        <label><input type="radio" name="q3" value="4"> 4</label>
+        <label><input type="radio" name="q3" value="5"> 5</label>
+      </div>
+    </div>
+
+
+    <div class="question">
+      <label>7. Wenn ich bei einem Wettkampf enttäuschend abschneide, sehe ich das als Lernchance.</label>
       <div class="scale">
         <label><input type="radio" name="q4" value="1"> 1</label>
         <label><input type="radio" name="q4" value="2"> 2</label>
@@ -283,7 +331,7 @@
     </div>
 
     <div class="question">
-      <label>6. Technisch schwierige Trails sehe ich als Chance, neue Fähigkeiten zu lernen.</label>
+      <label>8. Manche Menschen sind einfach von Natur aus gute Trailrunner.</label>
       <div class="scale">
         <label><input type="radio" name="q5" value="1"> 1</label>
         <label><input type="radio" name="q5" value="2"> 2</label>
@@ -294,7 +342,7 @@
     </div>
 
     <div class="question">
-      <label>7. Nach einem schlechten Wettkampf analysiere ich, was ich verbessern kann.</label>
+      <label>9. Auch wenn ich anfangs in einem Bereich schwach bin (z.B. bergab laufen), kann ich darin mit Übungen gut werden.</label>
       <div class="scale">
         <label><input type="radio" name="q6" value="1"> 1</label>
         <label><input type="radio" name="q6" value="2"> 2</label>
@@ -305,7 +353,7 @@
     </div>
 
     <div class="question">
-      <label>8. Rückschläge gehören für mich zum Lernprozess.</label>
+      <label>10. Wenn ich ein Trainingsziel nicht sofort erreiche, bleibe ich trotzdem dran.</label>
       <div class="scale">
         <label><input type="radio" name="q7" value="1"> 1</label>
         <label><input type="radio" name="q7" value="2"> 2</label>
@@ -315,8 +363,8 @@
       </div>
     </div>
 
-    <div class="question">
-      <label>9. Ich glaube, dass mentale Stärke trainierbar ist.</label>
+<div class="question">
+      <label>11. Bitte wähle bei dieser Aussage "Stimme eher zu" aus.</label>
       <div class="scale">
         <label><input type="radio" name="q8" value="1"> 1</label>
         <label><input type="radio" name="q8" value="2"> 2</label>
@@ -326,8 +374,9 @@
       </div>
     </div>
 
-    <div class="question">
-      <label>10. Feedback von anderen Läufer:innen hilft mir, besser zu werden.</label>
+
+<div class="question">
+      <label>12. Meine grundlegende Leistungssfähigkeit im Trailrunning lässt sich nur begrenzt verändern.</label>
       <div class="scale">
         <label><input type="radio" name="q9" value="1"> 1</label>
         <label><input type="radio" name="q9" value="2"> 2</label>
@@ -337,10 +386,95 @@
       </div>
     </div>
 
+<div class="question">
+      <label>13. Wenn jemand schneller oder technisch stärker ist als ich, versuche ich von dieser Person zu lernen.</label>
+      <div class="scale">
+        <label><input type="radio" name="q10" value="1"> 1</label>
+        <label><input type="radio" name="q10" value="2"> 2</label>
+        <label><input type="radio" name="q10" value="3"> 3</label>
+        <label><input type="radio" name="q10" value="4"> 4</label>
+        <label><input type="radio" name="q10" value="5"> 5</label>
+      </div>
+    </div>
+
+
+
+<div class="question">
+      <label>14. Fehler im Training zeigen  mir, woran ich arbeiten sollte.</label>
+      <div class="scale">
+        <label><input type="radio" name="q11" value="1"> 1</label>
+        <label><input type="radio" name="q11" value="2"> 2</label>
+        <label><input type="radio" name="q11" value="3"> 3</label>
+        <label><input type="radio" name="q11" value="4"> 4</label>
+        <label><input type="radio" name="q11" value="5"> 5</label>
+      </div>
+    </div>
+
+
+<div class="question">
+      <label>15. Ich suche mir bewusst Trainingsreize, die mich fordern.</label>
+      <div class="scale">
+        <label><input type="radio" name="q12" value="1"> 1</label>
+        <label><input type="radio" name="q12" value="2"> 2</label>
+        <label><input type="radio" name="q12" value="3"> 3</label>
+        <label><input type="radio" name="q12" value="4"> 4</label>
+        <label><input type="radio" name="q12" value="5"> 5</label>
+      </div>
+    </div>
+
+<div class="question">
+      <label>16. Ich sehe Plateaus in meiner Leistung als normalen Teil des Entwicklungsprozesses.</label>
+      <div class="scale">
+        <label><input type="radio" name="q13" value="1"> 1</label>
+        <label><input type="radio" name="q13" value="2"> 2</label>
+        <label><input type="radio" name="q13" value="3"> 3</label>
+        <label><input type="radio" name="q13" value="4"> 4</label>
+        <label><input type="radio" name="q13" value="5"> 5</label>
+      </div>
+    </div>
+
+
+
+<div class="question">
+      <label>17. Wenn ich auf einem technischen Trail Probleme habe, liegt das eher an fehlendem Talent als an mangelnder Übung.</label>
+      <div class="scale">
+        <label><input type="radio" name="q14" value="1"> 1</label>
+        <label><input type="radio" name="q14" value="2"> 2</label>
+        <label><input type="radio" name="q14" value="3"> 3</label>
+        <label><input type="radio" name="q14" value="4"> 4</label>
+        <label><input type="radio" name="q14" value="5"> 5</label>
+      </div>
+    </div>
+
+
+<div class="question">
+      <label>18. Fortschritt im Trailrunning entsteht vor allem durch kontinuierliches Lernen und Anpassen.</label>
+      <div class="scale">
+        <label><input type="radio" name="q15" value="1"> 1</label>
+        <label><input type="radio" name="q15" value="2"> 2</label>
+        <label><input type="radio" name="q15" value="3"> 3</label>
+        <label><input type="radio" name="q15" value="4"> 4</label>
+        <label><input type="radio" name="q15" value="5"> 5</label>
+      </div>
+    </div>
+
+
+<div class="question">
+      <label>19. Rückschläge im Training helfen mir, bessere Strategien zu entwickeln.</label>
+      <div class="scale">
+        <label><input type="radio" name="q16" value="1"> 1</label>
+        <label><input type="radio" name="q16" value="2"> 2</label>
+        <label><input type="radio" name="q16" value="3"> 3</label>
+        <label><input type="radio" name="q16" value="4"> 4</label>
+        <label><input type="radio" name="q16" value="5"> 5</label>
+      </div>
+    </div>
+
+
     <h2>C – Offene Fragen</h2>
 
     <div class="question">
-      <label for="challenge">Was war deine größte Herausforderung im Trailrunning – und was hast du daraus gelernt?</label>
+      <label for="challenge">Was war deine größte Herausforderung im Trailrunning und was hast du daraus gelernt?</label>
       <textarea id="challenge" name="challenge"></textarea>
     </div>
 
@@ -396,10 +530,12 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
 
   // Formulardaten sammeln
   const formData = {
+    alter: document.getElementById('alter').value,
+    geschlecht: document.getElementById('geschlecht').value,
     experience: document.getElementById('experience').value,
     frequency: document.getElementById('frequency').value,
-    motivation: document.getElementById('motivation').value,
-	ziele: Array.from(document.querySelectorAll('input[name="ziele"]:checked'))
+    wettkampf: document.getElementById('wettkampf').value,
+    ziele: Array.from(document.querySelectorAll('input[name="ziele"]:checked'))
 	.map(cb => cb.value)
 	.join(", "),
     ziele1: Array.from(document.querySelectorAll('input[name="ziele1"]:checked'))
@@ -408,13 +544,22 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
     mindset: document.getElementById('mindset').value,
     kopfentscheidung: document.getElementById('kopfentscheidung').value,
     mentality: document.getElementById('mentality').value,
-    dnf: document.getElementById('dnf').value,
+    q1: document.querySelector('input[name="q1"]:checked')?.value || '',
+    q2: document.querySelector('input[name="q2"]:checked')?.value || '',
+    q3: document.querySelector('input[name="q3"]:checked')?.value || '',
     q4: document.querySelector('input[name="q4"]:checked')?.value || '',
     q5: document.querySelector('input[name="q5"]:checked')?.value || '',
     q6: document.querySelector('input[name="q6"]:checked')?.value || '',
     q7: document.querySelector('input[name="q7"]:checked')?.value || '',
     q8: document.querySelector('input[name="q8"]:checked')?.value || '',
     q9: document.querySelector('input[name="q9"]:checked')?.value || '',
+    q10: document.querySelector('input[name="q10"]:checked')?.value || '',
+    q11: document.querySelector('input[name="q11"]:checked')?.value || '',
+    q12: document.querySelector('input[name="q12"]:checked')?.value || '',
+    q13: document.querySelector('input[name="q13"]:checked')?.value || '',
+    q14: document.querySelector('input[name="q14"]:checked')?.value || '',
+    q15: document.querySelector('input[name="q15"]:checked')?.value || '',
+    q16: document.querySelector('input[name="q16"]:checked')?.value || '',
     challenge: document.getElementById('challenge').value,
     growth: document.getElementById('growth').value,
     tip: document.getElementById('tip').value
