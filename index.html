@@ -33,6 +33,13 @@
       border-bottom: 1px solid #ddd;
     }
 
+    .question.error {
+    border: 2px solid #c0392b;
+    background: #fff5f5;
+    padding: 15px;
+    border-radius: 10px;
+    }
+
     label {
       font-weight: bold;
       display: block;
@@ -285,7 +292,7 @@
     
     <p><strong>Skala:</strong> 1 = stimme gar nicht zu | 2 = Stimme eher nicht zu | 3 = Teils/teils | 4 = Stimme eher zu | 5 = stimme voll zu</p>
     
-    <div class="question">
+    <div class="question" id="question-q1">
       <label>4. Ich kann meine Trailrunning-Fähigkeiten durch gezieltes Training deutlich verbessern.</label>
       <div class="scale">
         <label><input type="radio" name="q1" value="1"> 1</label>
@@ -296,7 +303,7 @@
       </div>
     </div>
 
-    <div class="question">
+    <div class="question" id="question-q2">
       <label>5. Technisch schwierige Trails motivieren mich eher, als dass sie mich abschrecken.</label>
       <div class="scale">
         <label><input type="radio" name="q2" value="1"> 1</label>
@@ -307,7 +314,7 @@
       </div>
     </div>
 
-<div class="question">
+<div class="question" id="question-q3">
       <label>6. Wenn ich ein Trainingsziel verfehle, verliere ich schnell die Motivation.</label>
       <div class="scale">
         <label><input type="radio" name="q3" value="1"> 1</label>
@@ -319,7 +326,7 @@
     </div>
 
 
-    <div class="question">
+    <div class="question" id="question-q4">
       <label>7. Wenn ich bei einem Wettkampf enttäuschend abschneide, sehe ich das als Lernchance.</label>
       <div class="scale">
         <label><input type="radio" name="q4" value="1"> 1</label>
@@ -330,7 +337,7 @@
       </div>
     </div>
 
-    <div class="question">
+    <div class="question" id="question-q5">
       <label>8. Manche Menschen sind einfach von Natur aus gute Trailrunner.</label>
       <div class="scale">
         <label><input type="radio" name="q5" value="1"> 1</label>
@@ -341,7 +348,7 @@
       </div>
     </div>
 
-    <div class="question">
+    <div class="question" id="question-q6">
       <label>9. Auch wenn ich anfangs in einem Bereich schwach bin (z.B. bergab laufen), kann ich darin mit Übungen gut werden.</label>
       <div class="scale">
         <label><input type="radio" name="q6" value="1"> 1</label>
@@ -352,7 +359,7 @@
       </div>
     </div>
 
-    <div class="question">
+    <div class="question" id="question-q7">
       <label>10. Wenn ich ein Trainingsziel nicht sofort erreiche, bleibe ich trotzdem dran.</label>
       <div class="scale">
         <label><input type="radio" name="q7" value="1"> 1</label>
@@ -363,7 +370,7 @@
       </div>
     </div>
 
-<div class="question">
+<div class="question" id="question-q8">
       <label>11. Bitte wähle bei dieser Aussage "Stimme eher zu" aus.</label>
       <div class="scale">
         <label><input type="radio" name="q8" value="1"> 1</label>
@@ -375,7 +382,7 @@
     </div>
 
 
-<div class="question">
+<div class="question" id="question-q9">
       <label>12. Meine grundlegende Leistungssfähigkeit im Trailrunning lässt sich nur begrenzt verändern.</label>
       <div class="scale">
         <label><input type="radio" name="q9" value="1"> 1</label>
@@ -386,7 +393,7 @@
       </div>
     </div>
 
-<div class="question">
+<div class="question" id="question-q10">
       <label>13. Wenn jemand schneller oder technisch stärker ist als ich, versuche ich von dieser Person zu lernen.</label>
       <div class="scale">
         <label><input type="radio" name="q10" value="1"> 1</label>
@@ -399,7 +406,7 @@
 
 
 
-<div class="question">
+<div class="question" id="question-q11">
       <label>14. Fehler im Training zeigen  mir, woran ich arbeiten sollte.</label>
       <div class="scale">
         <label><input type="radio" name="q11" value="1"> 1</label>
@@ -411,7 +418,7 @@
     </div>
 
 
-<div class="question">
+<div class="question" id="question-q12">
       <label>15. Ich suche mir bewusst Trainingsreize, die mich fordern.</label>
       <div class="scale">
         <label><input type="radio" name="q12" value="1"> 1</label>
@@ -422,7 +429,7 @@
       </div>
     </div>
 
-<div class="question">
+<div class="question" id="question-q13">
       <label>16. Ich sehe Plateaus in meiner Leistung als normalen Teil des Entwicklungsprozesses.</label>
       <div class="scale">
         <label><input type="radio" name="q13" value="1"> 1</label>
@@ -435,7 +442,7 @@
 
 
 
-<div class="question">
+<div class="question" id="question-q14">
       <label>17. Wenn ich auf einem technischen Trail Probleme habe, liegt das eher an fehlendem Talent als an mangelnder Übung.</label>
       <div class="scale">
         <label><input type="radio" name="q14" value="1"> 1</label>
@@ -447,7 +454,7 @@
     </div>
 
 
-<div class="question">
+<div class="question" id="question-q15">
       <label>18. Fortschritt im Trailrunning entsteht vor allem durch kontinuierliches Lernen und Anpassen.</label>
       <div class="scale">
         <label><input type="radio" name="q15" value="1"> 1</label>
@@ -459,7 +466,7 @@
     </div>
 
 
-<div class="question">
+<div class="question" id="question-q16">
       <label>19. Rückschläge im Training helfen mir, bessere Strategien zu entwickeln.</label>
       <div class="scale">
         <label><input type="radio" name="q16" value="1"> 1</label>
@@ -525,8 +532,42 @@ begrenzeCheckboxen('ziele1');
 begrenzeCheckboxen('ziele');
 
 
+
 document.getElementById('surveyForm').addEventListener('submit', function(event) {
   event.preventDefault();
+
+
+  // Fehler-Markierungen zurücksetzen
+  document.querySelectorAll('.question.error')
+    .forEach(el => el.classList.remove('error'));
+
+
+  // Prüfen, ob alle Growth-Mindset-Fragen beantwortet wurden
+  for (let i = 1; i <= 16; i++) {
+
+    const antwort = document.querySelector(`input[name="q${i}"]:checked`);
+
+    if (!antwort) {
+
+      alert("Bitte beantworte alle Growth-Mindset-Fragen, bevor du die Umfrage absendest.");
+
+      const frage = document.getElementById(`question-q${i}`);
+
+      if (frage) {
+
+        frage.classList.add("error");
+        
+        frage.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+        frage.querySelector('input[type="radio"]').focus();
+      }
+
+      return; // Versand abbrechen
+    }
+  }
 
   // Formulardaten sammeln
   const formData = {
@@ -596,3 +637,4 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
 
 </body>
 </html>
+
